@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 
-docker login -e ${DOCKER_EMAIL} -u ${DOCKER_USER} -p ${DOCKER_PASS}
+set -x
+set -e
+
+docker login -u ${DOCKER_USER} -p ${DOCKER_PASS}
 export REPO=dujust/base-image
 export COMMIT=0.0.1
 export TAG="latest"
