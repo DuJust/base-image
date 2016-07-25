@@ -96,4 +96,4 @@ RUN apt-get update -qq && apt-get install -y build-essential libpq-dev default-j
 # npm install
 RUN mkdir -p /usr/local/node
 ADD package.json /usr/local/node/package.json
-RUN cd /usr/local/node && npm install node-sass --unsafe-perm && npm install && cd /
+RUN cd /usr/local/node && npm install && npm rebuild node-sass --unsafe-perm && cd /
